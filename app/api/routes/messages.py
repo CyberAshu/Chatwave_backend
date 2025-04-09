@@ -13,6 +13,7 @@ from fastapi import Request
 from app.core.dependencies import get_current_active_user, get_db
 from app.core.config import settings
 from app.models.friendship import Friendship, FriendshipStatus
+from app.models.group import GroupMember
 from app.models.message import Message
 from app.models.file_attachment import FileAttachment
 from app.models.user import User

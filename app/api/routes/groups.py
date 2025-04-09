@@ -2,9 +2,10 @@ from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
-
+from sqlalchemy import func, select
 from app.core.dependencies import get_current_active_user, get_db
 from app.models.group import Group, GroupMember, GroupMemberRole
+from app.models.message import Message
 from app.models.user import User
 from app.models.activity_log import ActivityLog, ActivityType
 from app.schemas.group import (
@@ -15,6 +16,7 @@ from app.schemas.group import (
     GroupInvite
 )
 from app.schemas.message import MessageCreate, MessageResponse
+from app.websockets import connection_manager
 
 router = APIRouter()
 

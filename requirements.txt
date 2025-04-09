@@ -11,3 +11,4 @@ asyncpg
 python-multipart
 alembic
 psycopg2
+'uvicorn[standard]'

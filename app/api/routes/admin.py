@@ -11,6 +11,8 @@ from app.models.activity_log import ActivityLog, ActivityType
 from app.schemas.user import UserResponse
 from app.schemas.message import MessageResponse
 from app.schemas.activity_log import ActivityLogResponse
+from sqlalchemy import select
+
 
 router = APIRouter()
 
