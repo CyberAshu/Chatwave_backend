@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+slowapi
+pydantic_settings
+pydantic[email]
+python-jose
+bcrypt
+pyotp
+asyncpg
+python-multipart
+alembic
+psycopg2
